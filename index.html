@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Armaan K.</title>
+  <meta name="description" content="Armaan K. likes to build cool stuff. Open the chest and pull one of eight projects.">
+  <meta name="theme-color" content="#0E1016">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Armaan K.">
+  <meta property="og:description" content="Open the chest. Eight projects inside.">
+  <meta property="og:url" content="https://armaan-k.akdagoat01.workers.dev/">
+  <meta property="og:image" content="https://armaan-k.akdagoat01.workers.dev/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#binder">Skip to the binder</a>
+
+  <header class="hud">
+    <div class="hud-id">
+      <h1 class="hud-name">Armaan K.</h1>
+      <p class="hud-sub">I like to build cool stuff.</p>
+    </div>
+    <a class="hud-count" id="counter" href="#binder">
+      <i class="ph-fill ph-cards" aria-hidden="true"></i>
+      <span><b data-count>0</b>/8<span class="sr"> pulled. Go to the binder.</span></span>
+    </a>
+  </header>
+
+  <main>
+    <section class="stage" id="stage" aria-label="The chest">
+      <canvas id="stage-canvas" aria-hidden="true"></canvas>
+      <div class="fallback-chest" aria-hidden="true"><i class="ph-fill ph-treasure-chest"></i></div>
+
+      <div class="pull">
+        <button class="btn btn-gold btn-big" id="open" type="button" data-magnetic disabled>
+          <i class="ph-fill ph-treasure-chest" aria-hidden="true"></i><span class="label">Loading the chest</span>
+        </button>
+        <p class="pull-hint" id="pull-hint" aria-live="polite">Eight projects inside.</p>
+      </div>
+
+      <article class="drop" id="drop" hidden aria-labelledby="drop-title">
+        <button class="drop-close" id="drop-close" type="button" aria-label="Put the card away"><i class="ph ph-x" aria-hidden="true"></i></button>
+        <img class="drop-art" id="drop-art" alt="" width="768" height="1076">
+        <p class="drop-meta"><span class="chip" id="drop-type"></span><span id="drop-month"></span></p>
+        <h2 class="drop-title" id="drop-title" aria-live="polite"></h2>
+        <p class="drop-blurb" id="drop-blurb"></p>
+        <ul class="drop-facts" id="drop-facts"></ul>
+        <div class="drop-actions">
+          <button class="btn btn-gold" id="again" type="button" data-magnetic><i class="ph ph-arrows-clockwise" aria-hidden="true"></i><span class="label">Pull another</span></button>
+          <a class="btn btn-ghost" href="#binder"><i class="ph ph-cards" aria-hidden="true"></i>Binder</a>
+        </div>
+        <p class="drop-tip">Drag the card to spin it.</p>
+      </article>
+    </section>
+
+    <section class="binder" id="binder" aria-labelledby="binder-h">
+      <div class="wrap">
+        <h2 class="section-h" id="binder-h" data-split>The binder</h2>
+        <p class="section-sub"><b data-count>0</b> of 8 pulled, newest first. Tap a sealed card to flip it early, or tap an open one for the details.</p>
+        <ol class="binder-grid" id="binder-grid"></ol>
+        <noscript>
+          <p class="noscript-list">This page needs JavaScript to open the chest. <!-- TEMPLATE: list your projects here --></p>
+        </noscript>
+      </div>
+    </section>
+
+    <section class="how" aria-labelledby="how-h">
+      <div class="wrap">
+        <h2 class="section-h" id="how-h" data-split>How they get built</h2>
+        <div class="how-line" aria-hidden="true"></div>
+        <ol class="how-steps">
+          <li class="how-step"><i class="ph ph-pencil-simple-line" aria-hidden="true"></i><b>Spec</b><span>I write down what it should do and how it should feel.</span></li>
+          <li class="how-step"><i class="ph ph-list-checks" aria-hidden="true"></i><b>Plan</b><span>I split it into small tasks, each with its own tests.</span></li>
+          <li class="how-step"><i class="ph ph-robot" aria-hidden="true"></i><b>Build</b><span>Claude agents write the code, one task at a time.</span></li>
+          <li class="how-step"><i class="ph ph-magnifying-glass" aria-hidden="true"></i><b>Review</b><span>I check what comes back. Nothing merges until the tests pass.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="outro" aria-labelledby="outro-h">
+      <div class="wrap">
+        <h2 class="section-h" id="outro-h" data-split>Pulled all eight?</h2>
+        <p class="section-sub">Send the chest to someone and see which card they get first.</p>
+        <button class="btn btn-gold btn-big" type="button" data-share data-magnetic><i class="ph ph-share-network" aria-hidden="true"></i>Share the chest</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <span>Armaan K., 2026</span>
+      <!-- TEMPLATE: confirm the GitHub username -->
+      <a href="https://github.com/Armaan-dev-ops" target="_blank" rel="noopener"><i class="ph ph-github-logo" aria-hidden="true"></i>GitHub</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

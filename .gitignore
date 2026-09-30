@@ -1,0 +1,7 @@
+node_modules
+dist
+.wrangler
+.impeccable/review
+.impeccable/questions
+.playwright-mcp
+.DS_Store

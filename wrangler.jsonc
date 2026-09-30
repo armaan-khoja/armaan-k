@@ -1,0 +1,8 @@
+{
+  // Deploy with: npm run deploy   (builds with Vite, then uploads dist/)
+  "name": "armaan-k",
+  "compatibility_date": "2026-09-29",
+  "assets": { "directory": "./dist" },
+  "workers_dev": true,
+  "preview_urls": false
+}
