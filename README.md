@@ -21,7 +21,7 @@ The build lands in `dist/` with relative paths, so it works at a domain root or 
 
 ## Deploy
 
-- **GitHub Pages:** every push to `main` builds and publishes through `.github/workflows/pages.yml`.
+- **GitHub Pages:** `npm run deploy:pages` builds the site and publishes `dist/` to the `gh-pages` branch, which Pages serves at https://armaan-khoja.github.io/armaan-k/.
 - **Cloudflare:** `npm run deploy` builds and uploads `dist/` to the `armaan-k` Worker.
 
 ## Editing the cards
